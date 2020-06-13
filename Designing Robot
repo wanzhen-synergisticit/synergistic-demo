@@ -1,0 +1,27 @@
+Microservices:
+	+ Social: 
+		1. Take raw request.
+		2. Convert raw request into conversational object.
+		3. Call microservices then aggregative the response.
+		4. Sending aggregative response back to client.
+	+ Core engine:
+		1. Get data from database then compile the response back to social microservice.
+	+ Platform integration:
+		1. Call the 3rd party api, get the response and send it to the core engine.
+
+"These 3 microservices are different spring boot application."
+Register a facebook account.
+
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNTg5NTEzMjM2LCJpYXQiOjE1ODk0OTUyMzZ9.DqUK1XOqt3iZkoTsNWs6-S_80UxPJJm6xnJXPCrjQoT_Kbcvdv1b_TPwBcrlruHqA0HYtL9mNaak_k-oma4yww
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.synergistic</groupId>
+				<artifactId>application</artifactId>
+				<version>1.0</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	mvn -U clean install
